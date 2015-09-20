@@ -1,0 +1,76 @@
+<html>
+
+	<head>
+		<title>MINESWEEPER</title>
+		<script type="text/javascript" >
+		function setnum(num)
+		{
+			localStorage.setItem("numlevel",num);
+			window.location.href = "level.html";
+		}
+		/*function getname()
+		{
+				myname=document.getElementById("name").innerHTML;
+				alert(myname);
+				localStorage.setItem("name",myname);
+		}*/
+		</script>
+		<style type="text/css">
+			*{
+			text-align:center;
+			font-family:papyrus;
+			}
+			#heading{
+				font-size:100px;
+				top:70px;
+				left:100px;
+				position:absolute;
+			}
+			#level{
+			width:50px;
+			height:50px;
+			left:400px;
+			top:245px;
+			font-family:papyrus;
+			font-size:30px;
+			position:absolute;
+			text-align:center;
+			border:1px solid white;
+			}
+			#lev{
+			width:250px;
+			height:50px;
+			left:120px;
+			top:250px;
+			font-family:papyrus;
+			font-size:40px;
+			position:absolute;
+			text-align:center;
+			}
+			#backbutton{
+			top:430px;
+			left:205px;
+			position:absolute;
+			}
+			
+		</style>
+	</head>
+
+	<body>
+		<img src="bigbomb.jpeg" style="width:640px;height:640px;top:0px;left:600px;position:absolute;">
+		<div id="heading">Minesweeper</div>
+		
+		<div id="lev">Choose level</div> 
+		<select id="level" onchange="setnum(this.value)">
+		<option disabled="disabled" selected="selected"> -- select an option -- </option>
+		<option value="3">3X3</option>
+		<option value="4">4X4</option>
+		<option value="5">5X5</option>
+		<option value="6">6X6</option>
+		<option value="7">7X7</option>
+		<option value="8">8X8</option>
+		</select>
+		<div id="backbutton"><a href="minesweeper.html"><img src="back.png" /> </a></div>
+	</body>
+
+</html>
